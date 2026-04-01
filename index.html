@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Desire Engine</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 🔥 TITLE -->
+  <h1>🔥 Desire Engine 🔥</h1>
+
+  <!-- 🧭 MAIN MENU -->
+  <div id="menu" class="container">
+    <h2>Select a Mode</h2>
+
+    <button onclick="showSection('challenges')">Challenges</button>
+    <button onclick="showSection('dares')">Dares</button>
+    <button onclick="showSection('kinky')">Kinky Mode</button>
+    <button onclick="showSection('positions')">Positions</button>
+    <button onclick="showSection('roleplay')">Roleplay</button>
+    <button onclick="showSection('slot')">Slot Machine</button>
+  </div>
+
+  <!-- 🎮 CHALLENGES -->
+  <div id="challenges" class="section">
+    <h2>Challenges</h2>
+
+<select id="challengeRole">
+  <option value="him">Him</option>
+  <option value="her">Her</option>
+</select>
+
+<br>
+<button onclick="getChallengeUI()">Get Challenge</button>
+
+<div class="card" id="challengeBox"></div>
+<button class="backBtn" onclick="goHome()">Back</button>
+  </div>
+
+  <!-- 🔥 DARES -->
+  <div id="dares" class="section">
+    <h2>Dares</h2>
+
+    <select id="dareRole">
+      <option value="him">Him</option>
+      <option value="her">Her</option>
+    </select>
+
+    <br>
+    <button onclick="getDareUI()">Get Dare</button>
+    <div class="card" id="dareBox"></div>
+    <button class="backBtn" onclick="goHome()">Back</button>
+  </div>
+
+  <!-- 🖤 KINKY MODE -->
+  <div id="kinky" class="section">
+    <h2>Kinky Mode</h2>
+    <button onclick="getKinkyUI()">Enter</button>
+    <div class="card" id="kinkyBox"></div>
+    <button class="backBtn" onclick="goHome()">Back</button>
+  </div>
+
+  <!-- 🎭 POSITIONS -->
+  <div id="positions" class="section">
+    <h2>Positions</h2>
+
+    <select id="positionRole">
+      <option value="him">Him</option>
+      <option value="her">Her</option>
+      <option value="either">Either</option>
+    </select>
+
+    <br>
+    <button onclick="getPositionUI()">Generate</button>
+
+    <div class="card">
+      <h3 id="positionName"></h3>
+      <p id="positionDesc"></p>
+      <img id="positionImg" src="" alt="" style="max-width: 200px; display: none;">
+    </div>
+
+    <button class="backBtn" onclick="goHome()">Back</button>
+  </div>
+
+  <!-- 🎭 ROLEPLAY -->
+  <div id="roleplay" class="section">
+    <h2>Roleplay</h2>
+    <button onclick="getRoleplayUI()">Start Scenario</button>
+
+    <div class="card">
+      <h3 id="roleplayTitle"></h3>
+      <p id="roleplayDesc"></p>
+    </div>
+
+    <button class="backBtn" onclick="goHome()">Back</button>
+  </div>
+
+  <!-- 🎰 SLOT MACHINE -->
+  <div id="slot" class="section">
+    <h2>Slot Machine</h2>
+    <button onclick="spinSlotUI()">Spin</button>
+
+    <div class="card" id="slotBox"></div>
+
+    <button class="backBtn" onclick="goHome()">Back</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
